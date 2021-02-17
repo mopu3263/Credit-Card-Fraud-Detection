@@ -22,7 +22,7 @@ Our goal is to implement 3 different machine learning models and one tensorflow 
 2. Data Processing
 As we know before, features V1-V28 have been transformed by PCA and scaled already. Whereas feature "Time" and "Amount" have not. And considering that we will analyze these two features with other V1-V28, they should better be scaled before we train our model using various algorithms. Here is why and how. Which scaling mehtod should we use? The Standard Scaler is not recommended as "Time" and "Amount" features are not normally distributed. The Min-Max Scaler is also not recommende as there are noticeable outliers in feature "Amount". The Robust Scaler are robust to outliers: (xi–Q1(x))/( Q3(x)–Q1(x)) (Q1 and Q3 represent 25% and 75% quartiles). So we choose Robust Scaler to scale these two features.
 
- Data Modeling
+3. Data Modeling
 The 4 models we used were a fully connected neural network, logistic regression, DecisionTree and RandomForest classifier.  Logistic regression outperformed both the DecisonTree and RandomForest. We believe that it is because of how the decision boundary changed with the class weights features. RandomForest next, and DecisionTree performed the poorest. 
 
 
